@@ -5,7 +5,7 @@
  * 
  * @author Joanne Jung
  * @date June 8, 2016
- * @version 1.0.1 : Updated Contact page with output in the console after submitted
+ * @version 1.0.2 : Updated app.js to work on all pages
  * 
  * Student ID : 300432364
  * website : http://joannejung-assign2-updated-miniportfolio.azurewebsites.net
@@ -31,6 +31,11 @@
     // create a reference to the sendButton
     var sendButton = document.getElementById("sendButton");
 
+    if (sendButton) {
+        // event listener - if there is a sendButton on the page
+        sendButton.addEventListener("click", sendButtonClick);
+    }
+
     // event handler function
     function sendButtonClick(event) {
         console.log("clicked!");
@@ -45,6 +50,8 @@
     // createa a reference to the form
     var contactForm = document.getElementById("contactForm");
 
+if(contactForm){
+    // event listener - if there is a contactForm on the page
     contactForm.addEventListener("submit", function (event) {
         event.preventDefault();
         console.log("Form is submitted");
@@ -52,7 +59,13 @@
         contactForm.reset();
 
     });
-
+}
+    /**
+      * This function shows the input from each form field on the console
+      * 
+      * @method showSubmittedDate
+      * @return {void} 
+      */
     function showSubmittedData() {
         console.log("=======================================================");
         console.log("First Name : " + firstName.value);
