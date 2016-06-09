@@ -32,7 +32,7 @@
     var sendButton = document.getElementById("sendButton");
 
     if (sendButton) {
-        // event listener - if there is a sendButton on the page
+        // event listener - if there is a sendButton on the page, then show
         sendButton.addEventListener("click", sendButtonClick);
     }
 
@@ -51,7 +51,7 @@
     var contactForm = document.getElementById("contactForm");
 
 if(contactForm){
-    // event listener - if there is a contactForm on the page
+    // event listener - if there is a contactForm on the page, then call function showSubmittedData
     contactForm.addEventListener("submit", function (event) {
         event.preventDefault();
         console.log("Form is submitted");
